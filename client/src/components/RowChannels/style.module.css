@@ -1,0 +1,17 @@
+.channelRowContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+
+.channelRowContainer::-webkit-scrollbar {
+
+    display: none;
+}

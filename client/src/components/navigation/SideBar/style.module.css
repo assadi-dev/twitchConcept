@@ -1,0 +1,135 @@
+.wrapper {
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.listContainer {
+    width: 100%;
+
+}
+
+.listItems {
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    padding: 0 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.listItems:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.listItems .listItemsIcones {
+    margin-right: 0.6rem;
+}
+
+.listItemsLinks {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.listItemsLinks:hover {
+    color: #fff;
+}
+
+.activeNav {
+    color: #fff;
+}
+
+.activeNav::after {
+    content: "";
+    display: inline;
+    height: 100%;
+    width: 3.5px;
+    position: absolute;
+    background: #fff;
+    right: 0;
+    border-radius: 0.5px;
+    -webkit-border-radius: 0.5px;
+    -moz-border-radius: 0.5px;
+    -ms-border-radius: 0.5px;
+    -o-border-radius: 0.5px;
+}
+
+.separator {
+    height: 0.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    width: 80%;
+    margin: 2rem auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-align: center;
+}
+
+/**** Recommanded Zone ****/
+
+.recomandWrapper {
+    max-height: 400px;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+}
+
+.itemContainer {
+    margin-top: 0.5rem;
+    display: flex;
+    padding: 0.5rem 0.5rem 0rem 1rem;
+    justify-content: center;
+    max-width: 100%;
+    align-items: center;
+
+
+
+}
+
+.streamDetail {
+    margin-left: 0.5rem;
+    width: 70%;
+    cursor: pointer;
+    height: 100%;
+
+}
+
+.streamDetail p {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70%;
+    text-overflow: ellipsis;
+    line-height: 1rem;
+
+
+}
+
+.streamDetail p:first-of-type {
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.streamDetail p:nth-of-type(2) {
+    font-weight: 700;
+}
+
+.streamDetail:hover p {
+    color: rgba(255, 255, 255, 1);
+}

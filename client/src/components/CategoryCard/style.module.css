@@ -1,0 +1,34 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cardContainer img {
+    width: 155px;
+    height: 180px;
+    margin-top: 0;
+    object-fit: contain;
+}
+
+.infoCategory {
+    width: 100%;
+    padding-left: 8px;
+
+}
+
+.infoCategory p {
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.infoCategory p:first-of-type {
+    color: rgba(0, 0, 0, 1);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
