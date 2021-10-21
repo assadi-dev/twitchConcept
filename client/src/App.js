@@ -6,14 +6,9 @@ import Main from "./pages/Main";
 
 function App() {
   return (
-    <Router>
-      <ThemeConfig>
-        <Switch>
-          <RouteProtected path="/login" component={Login} exact={true} />
-          <RouteProtected path="/" component={Main} />
-        </Switch>
-      </ThemeConfig>
-    </Router>
+    <ThemeConfig>
+      <Main />
+    </ThemeConfig>
   );
 }
 

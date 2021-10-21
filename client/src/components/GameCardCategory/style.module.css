@@ -1,21 +1,25 @@
 .gameCardContainer {
-
-
     position: relative;
-
     margin: 1rem 0.5rem;
-    flex-shrink: 1;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .gameCardContainer img {
-    width: 198px;
-    height: 265px;
+    width: 168px;
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     flex-grow: 1;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+
 }
 
 .infoGameCard {
@@ -28,4 +32,16 @@
 .infoGameCard p:first-of-type {
     font-weight: bold;
     color: rgba(26, 26, 26, 1);
+}
+
+.gameCardContainer img:hover {
+    transform: translate3d(8px, -8px, 10px);
+    -webkit-transform: translate3d(8px, -8px, 10px);
+    -moz-transform: translate3d(8px, -8px, 10px);
+    -ms-transform: translate3d(8px, -8px, 10px);
+    -o-transform: translate3d(8px, -8px, 10px);
+}
+
+.divCardContainer:hover {
+    background-color: var(--main-bg-color);
 }

@@ -1,0 +1,108 @@
+.navContainer {
+    padding: 0rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+    max-height: 180px;
+}
+
+.searchBarContainer {
+    height: 50px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    box-shadow: 0px 10px 50px -30px rgb(0, 0, 0);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.searchBaForm {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(50, 50, 50, 0.1);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+
+.searchBaForm:hover {
+    border: 1px solid rgba(50, 50, 50, 0.5);
+}
+
+.focus {
+    background-color: transparent;
+    border: 2px solid var(--main-bg-color) !important;
+}
+
+.serachField {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 2px 5px;
+    background-color: transparent;
+
+}
+
+.searchButton {
+    padding: 0px 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.searchDataList {
+    padding: 2px;
+    border: none;
+
+}
+
+.searchResult {
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.searchResult li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 5px;
+}
+
+.leftSide {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.twitchConnect {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: var(--main-bg-color);
+    padding: 8px 18px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.8rem;
+}

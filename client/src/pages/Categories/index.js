@@ -7,15 +7,15 @@ const Categories = () => {
     <div>
       <h1>Categories</h1>
       <div className={styles.rowCategories}>
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
-        <GameCardCategory />
+        <GameCardCategory slug={"FIFA 22"} />
+        <GameCardCategory slug={"Destiny 2"} />
+        <GameCardCategory slug={"Disscussion"} />
+        <GameCardCategory slug={"League of Legend"} />
+        <GameCardCategory slug={"Valorant"} />
+        <GameCardCategory slug={"Genshin impact"} />
+        <GameCardCategory slug={"GTA V"} />
+        <GameCardCategory slug={"Among us"} />
+        <GameCardCategory slug={"Fortnite"} />
       </div>
     </div>
   );

@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "../../components/navigation/Navbar";
 import SideBar from "../../components/navigation/SideBar";
 import RouteProtected from "../../components/RouteProtected";
 import routes from "../../utils/routes";
-import Categories from "../Categories";
-import Home from "../Home";
+import { useDispatch, useSelectore } from "react-redux";
+import { getTopGames } from "../../redux/actions/GameActions";
+import { get_token_user } from "../../redux/actions/UserActions";
 
 const Main = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {}, [dispatch]);
+
   return (
     <Router>
       <div className="wrapper">
         <SideBar />
-        <Switch>
-          <div className="wrapperContent">
+        <div className="wrapperContent">
+          <Navbar />
+          <Switch>
             {routes.map((route, index) => (
               <RouteProtected
                 key={index}
@@ -21,8 +28,8 @@ const Main = () => {
                 exact={route.exact}
               />
             ))}
-          </div>
-        </Switch>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

@@ -23,10 +23,11 @@
 .listItems {
     color: rgba(255, 255, 255, 0.5);
     display: flex;
-    padding: 0 1rem;
     width: 100%;
     margin-bottom: 1rem;
     position: relative;
+    padding: 0rem 1.2rem;
+
 }
 
 .listItems:hover {
@@ -79,6 +80,11 @@
     text-align: center;
 }
 
+.itemTitle {
+
+    margin-left: 1.2rem;
+}
+
 /**** Recommanded Zone ****/
 
 .recomandWrapper {
@@ -92,17 +98,20 @@
 .itemContainer {
     margin-top: 0.5rem;
     display: flex;
-    padding: 0.5rem 0.5rem 0rem 1rem;
-    justify-content: center;
     max-width: 100%;
     align-items: center;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
 
 
 
 }
 
 .streamDetail {
-    margin-left: 0.5rem;
+    margin-left: 1.2rem;
     width: 70%;
     cursor: pointer;
     height: 100%;

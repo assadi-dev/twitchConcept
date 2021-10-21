@@ -1,18 +1,17 @@
 import React from "react";
-import CategoryCard from "../CategoryCard";
+import GameCardCategory from "../GameCardCategory";
 import styles from "./style.module.css";
 
 const RowCategories = () => {
   return (
     <div className={styles.categoryRowContainer}>
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
-      <CategoryCard />
+      <GameCardCategory />
+      <GameCardCategory />
+      <GameCardCategory />
+      <GameCardCategory />
+      <GameCardCategory />
+      <GameCardCategory />
+      <GameCardCategory />
     </div>
   );
 };

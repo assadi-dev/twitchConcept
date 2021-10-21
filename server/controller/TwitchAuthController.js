@@ -10,15 +10,23 @@ const scope = [
   "analytics:read:games",
   "channel:read:hype_train",
   "channel:read:redemptions",
-  "user:read:broadcast",
   "channel:read:subscriptions",
+  "user:read:broadcast",
+  "user:read:email",
 ].join(" ");
+
+const claims = {
+  id_token: { email: null },
+  userinfo: { picture: null, preferred_username: null },
+};
 
 const userssid = "userssid";
 
 exports.getCode = (req, res) => {
   res.redirect(
-    `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${clientID}&redirect_uri=${redirect_uri}&scope=${scope}`
+    `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${clientID}&redirect_uri=${redirect_uri}&scope=${scope}&claims=${JSON.stringify(
+      claims
+    )}`
   );
 };
 
@@ -30,6 +38,7 @@ exports.getToken = async (req, res) => {
         `https://id.twitch.tv/oauth2/token?client_id=${clientID}&client_secret=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirect_uri}`
       )
       .then((docs) => {
+        console.log(docs);
         res.cookie(userssid, docs.data).redirect("/");
       })
       .catch((error) => {
@@ -38,6 +47,16 @@ exports.getToken = async (req, res) => {
   } catch (error) {
     res.json(error.message);
   }
+};
+
+exports.getAuth = async (req, res) => {
+  let data = req.cookies.userssid;
+  res
+    .writeHead(200, {
+      "Set-Cookie": `access_token=${data.access_token}; HttpOnly`,
+      "Access-Control-Allow-Credentials": "true",
+    })
+    .send();
 };
 
 exports.cleanToken = async (req, res) => {

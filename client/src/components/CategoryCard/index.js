@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.css";
 
-const CategoryCard = () => {
+const CategoryCard = ({ slug }) => {
   return (
     <div className={styles.cardContainer}>
       <img

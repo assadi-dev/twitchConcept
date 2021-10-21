@@ -1,18 +1,27 @@
 .categorieCardContainer {
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 0.8rem;
+    margin: 1rem 0.5rem;
     position: relative;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 
 }
 
-.categorieCardContainer img {
-    width: 300px;
+.previewChannel {
+    width: 285px;
     height: 172px;
     object-fit: contain;
     margin-top: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .infoChannel {
@@ -28,6 +37,7 @@
     height: 40px;
     object-fit: contain;
     margin-right: 1rem;
+
 }
 
 .infoChannel p {
@@ -45,13 +55,31 @@
     font-size: 0.9rem;
 }
 
+.divCardContainer {
+    position: relative;
+}
+
 .badgeViewer {
     background-color: rgba(26, 26, 26, 0.8);
     padding: 5px 15px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    bottom: 30%;
+    bottom: 33%;
     left: 5px;
     font-size: 0.8rem;
+}
+
+.previewChannel:hover {
+    transform: translate3d(8px, -8px, 12px);
+    -webkit-transform: translate3d(8px, -8px, 12px);
+    -moz-transform: translate3d(8px, -8px, 12px);
+    -ms-transform: translate3d(8px, -8px, 12px);
+    -o-transform: translate3d(8px, -8px, 12px);
+}
+
+
+
+.divCardContainer:hover {
+    background-color: var(--main-bg-color);
 }

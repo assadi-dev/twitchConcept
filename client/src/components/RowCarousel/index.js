@@ -6,10 +6,8 @@ import StreamerCard from "../StreamerCard";
 const RowCaroussel = () => {
   const ref = useRef();
 
-  const [state, setState] = useState({ flkty: "" });
-
   useEffect(() => {
-    let flkty = new Flickity(ref.current, {
+    const flkty = new Flickity(ref.current, {
       cellAlign: "left",
       pageDots: false,
       contain: true,
@@ -17,7 +15,9 @@ const RowCaroussel = () => {
       wrapAround: true,
     });
 
-    setState({ ...state, flkty: flkty });
+    return () => {
+      flkty.destroy();
+    };
   }, []);
   return (
     <>

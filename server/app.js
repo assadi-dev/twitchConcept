@@ -13,12 +13,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
     name: "ssid",
-    secret: "keyboard cat",
+    secret: "keyboardcat",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true },
+    cookie: { secure: true, httpOnly: true },
   })
 );
+
+app.use(cookieParser());
 
 app.use(cors());
 

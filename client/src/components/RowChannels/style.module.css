@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     scrollbar-color: transparent transparent;
     scrollbar-width: thin;
+    padding: 1rem 0rem;
 }
 
 .channelRowContainer::-webkit-scrollbar {
