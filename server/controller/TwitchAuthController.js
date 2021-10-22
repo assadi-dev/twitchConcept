@@ -1,5 +1,3 @@
-const passport = require("passport");
-const twitchStrategy = require("passport-twitch").Strategy;
 const axios = require("axios");
 
 const clientID = "0o12o2olcnvy7akkfjjg1qdrg4k58q";
@@ -38,7 +36,7 @@ exports.getToken = async (req, res) => {
         `https://id.twitch.tv/oauth2/token?client_id=${clientID}&client_secret=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirect_uri}`
       )
       .then((docs) => {
-        console.log(docs);
+        //console.log(docs);
         res.cookie(userssid, docs.data).redirect("/");
       })
       .catch((error) => {

@@ -1,34 +1,36 @@
 {
-  "name": "twitchRedesign",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon index.js",
-    "client": "cd client && npm start"
-  },
-  "keywords": [],
-  "author": "Assadi",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.4",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "ent": "^2.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "install": "^0.13.0",
-    "npm": "^7.24.0",
-    "passport": "^0.4.1",
-    "passport-twitch": "^1.0.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.15.4",
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
-    "nodemon": "^2.0.12"
-  }
+    "name": "twitchRedesign",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon index.js",
+        "client": "cd client && npm start"
+    },
+    "keywords": [],
+    "author": "Assadi",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.4",
+        "cookie-parser": "^1.4.5",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "ent": "^2.2.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "install": "^0.13.0",
+        "npm": "^7.24.0",
+        "passport": "^0.4.1",
+        "passport-oauth": "^1.0.0",
+        "twitch-oauth-passport": "^1.0.4"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.15.4",
+        "@babel/core": "^7.15.5",
+        "@babel/node": "^7.15.4",
+        "@babel/preset-env": "^7.15.6",
+        "nodemon": "^2.0.12"
+    }
 }

@@ -5,7 +5,7 @@ import GameCardCategory from "../../components/GameCardCategory";
 const Categories = () => {
   return (
     <div>
-      <h1>Categories</h1>
+      <h1> Categories </h1>
       <div className={styles.rowCategories}>
         <GameCardCategory slug={"FIFA 22"} />
         <GameCardCategory slug={"Destiny 2"} />

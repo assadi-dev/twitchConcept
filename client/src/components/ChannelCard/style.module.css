@@ -9,7 +9,6 @@
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-
 }
 
 .previewChannel {
@@ -29,7 +28,6 @@
     padding-left: 8px;
     display: flex;
     margin-top: 0.3rem;
-
 }
 
 .infoChannel img {
@@ -37,7 +35,6 @@
     height: 40px;
     object-fit: contain;
     margin-right: 1rem;
-
 }
 
 .infoChannel p {
@@ -78,8 +75,18 @@
     -o-transform: translate3d(8px, -8px, 12px);
 }
 
-
-
-.divCardContainer:hover {
+.categorieCardContainer:nth-of-type(1n):hover .divCardContainer {
     background-color: var(--main-bg-color);
+}
+
+.categorieCardContainer:nth-of-type(2n):hover .divCardContainer {
+    background-color: red;
+}
+
+.categorieCardContainer:nth-of-type(3n):hover .divCardContainer {
+    background-color: green;
+}
+
+.categorieCardContainer:nth-of-type(4n):hover .divCardContainer {
+    background-color: yellow;
 }

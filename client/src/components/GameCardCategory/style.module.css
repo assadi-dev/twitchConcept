@@ -19,14 +19,12 @@
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-
 }
 
 .infoGameCard {
     padding: 0.5rem;
     font-size: 0.8rem;
     color: rgba(26, 26, 26, 0.5);
-
 }
 
 .infoGameCard p:first-of-type {
@@ -42,6 +40,18 @@
     -o-transform: translate3d(8px, -8px, 10px);
 }
 
-.divCardContainer:hover {
+.gameCardContainer:nth-of-type(1n):hover .divCardContainer {
     background-color: var(--main-bg-color);
+}
+
+.gameCardContainer:nth-of-type(2n):hover .divCardContainer {
+    background-color: red;
+}
+
+.gameCardContainer:nth-of-type(3n):hover .divCardContainer {
+    background-color: green;
+}
+
+.gameCardContainer:nth-of-type(4n):hover .divCardContainer {
+    background-color: yellow;
 }
