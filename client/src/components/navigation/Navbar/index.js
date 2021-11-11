@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className={styles.navContainer}>
       <SearchBar />
       <div className={styles.leftSide}>
-        <a href={`${url}/api/twitch/connect`} className={styles.twitchConnect}>
+        <a href={`${url}/auth/twitch/connect`} className={styles.twitchConnect}>
           Se connecter
         </a>
       </div>

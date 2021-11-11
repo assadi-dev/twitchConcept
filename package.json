@@ -15,6 +15,7 @@
     "dependencies": {
         "axios": "^0.21.4",
         "cookie-parser": "^1.4.5",
+        "cookie-session": "^1.4.0",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
         "ent": "^2.2.0",

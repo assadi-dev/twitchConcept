@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ChannelCard = () => {
   return (
-    <Link className={styles.categorieCardContainer}>
+    <div className={styles.categorieCardContainer}>
       <div className={styles.divCardContainer}>
         <img
           className={styles.previewChannel}
@@ -25,7 +25,7 @@ const ChannelCard = () => {
           <p>Destiny 2</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

@@ -15,11 +15,16 @@ const SideBar = () => {
       <div className={styles.listContainer}>
         <ul>
           <li className={styles.listItems}>
-            <NavLink className={styles.listItemsLinks} to="/">
+            <NavLink
+              className={styles.listItemsLinks}
+              to="/"
+              activeClassName={styles.activeNav}
+            >
               <FontAwesomeIcon icon={faTwitch} className={styles.iconStyle} />
               <span className={styles.itemTitle}> Accueil</span>
             </NavLink>
           </li>
+
           <li className={styles.listItems}>
             <NavLink
               className={styles.listItemsLinks}
