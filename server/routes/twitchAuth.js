@@ -21,7 +21,7 @@ router.get(
 router.get("/login/failure", (req, res) => {
   res.status(401).json({ success: false, message: "login faled" });
 });
-router.get("/login/succes", (req, res) => {
+router.get("/login/success", (req, res) => {
   if (req.user) {
     res
       .status(200)
@@ -33,7 +33,7 @@ router.get(
   "/twitch/callback",
   passport.authenticate("twitch", {
     successRedirect: CLIENT_REDIRECT,
-    failureRedirect: CLIENT_REDIRECT,
+    failureRedirect: "/login/failure",
   })
 );
 

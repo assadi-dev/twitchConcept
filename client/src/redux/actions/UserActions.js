@@ -1,5 +1,4 @@
 import axios from "axios";
-import { getCookies } from "../../utils/services";
 export const GET_USER_TOKEN = "GET_USER_TOKEN";
 
 export const get_token_user = () => {
