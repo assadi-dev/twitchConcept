@@ -15,8 +15,7 @@ const App = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
   const location = useLocation();
-  const [logged, setLogged] = useState(false);
-
+  const from = location.pathname;
   useEffect(() => {
     const getUser = async () => {
       await fetch(url_connect, {
@@ -33,26 +32,27 @@ const App = () => {
         })
         .then((resObject) => {
           let userAuth = resObject.user;
-          let from = location.pathname;
-          //setStorageKey("logged");
+
+          // setStorageKey("logged");
           setUser(userAuth);
-          setLogged(true);
-          console.log(from);
+
+          //console.log(from);
           // navigate(from, { replace: true });
         })
         .catch((err) => {
           //console.log(err);
         });
     };
-    getUser();
+    //getUser();
     const getKey = async () => {
       const key = await getStorageKey(storageKey);
-      console.log(key);
+      //console.log(key);
       if (key) {
-        setLogged(true);
+        await getUser();
+        navigate(from, { replace: true });
       }
     };
-    //getKey();
+    getKey();
   }, []);
   const contextValue = { userAuth: user, setUserAuth: setUser };
 
@@ -69,7 +69,7 @@ const App = () => {
                 key={index}
                 path={route.path}
                 element={
-                  <RouteProtected logged={logged} path={route.path}>
+                  <RouteProtected path={route.path}>
                     {route.component}
                   </RouteProtected>
                 }
